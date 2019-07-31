@@ -291,7 +291,7 @@ public class ImagePickerModule extends ReactContextBaseJavaModule
 
     try
     {
-      currentActivity.startActivityForResult(cameraIntent, requestCode);
+      currentActivity.startActivityForResult(Intent.createChooser(cameraIntent, "Choose camera app"),requestCode);
     }
     catch (ActivityNotFoundException e)
     {
